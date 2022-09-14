@@ -1,0 +1,85 @@
+
+:root {
+    --fade-in-time: 3s;
+}
+
+body
+{
+    padding: 0px;
+    margin: 0px;
+}
+
+button
+{
+    all: unset;
+    background-color: white;
+    outline: solid 1px black;
+    border-radius: 0px;
+    padding: 5px;
+    margin: 10px;
+    cursor: pointer;
+    user-select: none;
+
+}
+
+button:hover
+{
+    /* text-decoration: underline; */
+    box-shadow: -3px 4px black;
+}
+
+button:active
+{
+    background-color: black;
+    color: white;
+}
+
+.text-container
+{
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100px;
+    /* max-height: 100px; */
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 200px;
+    box-sizing: border-box;
+    overflow: scroll;
+    z-index: 0;
+    
+}
+
+.textbox
+{
+    display: block;
+    position: relative;
+    font-family:monospace;
+    width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    filter: opacity(0);
+    transition: var(--fade-in-time);
+}
+
+.staged
+{
+    display: block;
+    position: fixed;
+    left: 100vw;
+}
+
+.gradient-layer
+{
+    display: block;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(white 50px, rgba(255, 255, 255, 0) 100px);
+    z-index: 100;
+    pointer-events: none;
+}
+
