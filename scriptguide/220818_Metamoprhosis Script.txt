@@ -42,8 +42,8 @@ It is no dream.
                 *fade:10
                 “To hell with it all.”
                 *wait:25.5
-                #Keep sleeping a little longer.[b]
-Fade out section1.gif[c]
+        #Keep sleeping a little longer.[b]
+                Fade out section1.gif[c]
 
 
                 *play:keep_sleeping.wav
