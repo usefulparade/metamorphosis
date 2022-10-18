@@ -21,7 +21,7 @@ You are transformed into a monstrous verminous bug.
 
 #Examine yourself
         *play:bug_loop.wav
-                *animate:section1.gif[a]
+        *animate:section1.gif
 
 
 You lay on your armor-hard back.
@@ -42,8 +42,8 @@ It is no dream.
                 *fade:10
                 “To hell with it all.”
                 *wait:25.5
-        #Keep sleeping a little longer.[b]
-                Fade out section1.gif[c]
+        #Keep sleeping a little longer.
+                *animate-swap:section1.gif
 
 
                 *play:keep_sleeping.wav
@@ -61,7 +61,7 @@ It is no dream.
 
 
 #Yes, yes, thank you mother.
-*animate:shadows.gif[d]
+*animate:shadows.gif
 
 
 [Father] “What’s going on?”
@@ -72,7 +72,7 @@ It is no dream.
 
 *choice
         #Open the door.
-                *animate:section2.gif[e]
+                *animate:section2.gif
                 *play:open_the_door.wav
                 
                 [Mother] “Help, for God’s sake!”
@@ -82,12 +82,12 @@ It is no dream.
                 *wait:10
                 
                 *fade:10
-                You scurry to the corner, bleeding severely.[f] <--- RED TEXT
+                You scurry to the corner, bleeding severely. <--- RED TEXT
                 *animate: section2_still.gif
                 *fade:1
                 *wait:15
         #Don’t leave.
-Keep section 1 gif in frame[g]
+                Keep section 1 gif in frame[g]
                 *animate:section2_still.gif
                 *play:dont_leave.wav
                 *wait:22

@@ -7,7 +7,8 @@ You are transformed into a monstrous verminous bug.
 
 #Examine yourself
         *play:bug_loop.wav
-                *animate:section1.gif[a]
+        *play:fire.wav
+        *animate:section1.gif
 
 
 You lay on your armor-hard back.
@@ -24,14 +25,13 @@ It is no dream.
 *choice
         #Try to get up.
                 *play:try_to_get_up.wav
-                
                 *fade:10
                 “To hell with it all.”
                 *wait:25.5
-                #Keep sleeping a little longer.[b]
-Fade out section1.gif[c]
 
-
+        #Keep sleeping a little longer.
+                *animate-swap:section1.gif,section1.png
+                
                 *play:keep_sleeping.wav
                 
                 *fade:10
@@ -47,7 +47,7 @@ Fade out section1.gif[c]
 
 
 #Yes, yes, thank you mother.
-*animate:shadows.gif[d]
+*animate:shadows.gif
 
 
 [Father] “What’s going on?”
@@ -58,7 +58,7 @@ Fade out section1.gif[c]
 
 *choice
         #Open the door.
-                *animate:section2.gif[e]
+                *animate:section2.gif
                 *play:open_the_door.wav
                 
                 [Mother] “Help, for God’s sake!”
@@ -68,13 +68,14 @@ Fade out section1.gif[c]
                 *wait:10
                 
                 *fade:10
-                You scurry to the corner, bleeding severely.[f] <--- RED TEXT
-                *animate: section2_still.gif
+                <color:red>You scurry to the corner, bleeding severely.
+                *animate-swap:section2.gif,section2.png
                 *fade:1
                 *wait:15
         #Don’t leave.
-Keep section 1 gif in frame[g]
-                *animate:section2_still.gif
+                Keep section 1 gif in frame
+                *animate:section2.gif
+                *animate-swap:section2.gif,section2.png
                 *play:dont_leave.wav
                 *wait:22
 
@@ -82,15 +83,16 @@ Keep section 1 gif in frame[g]
 *fade:4
 *speed:6
 #You wake from a heavy swoon-like sleep.
-        *animate:section2_still.gif
-        *fade out all gifs (section 2/shadows)
+        *animate-fadeout:section2.gif
+        *animate-fadeout:shadows.gif
+        *animate-fadeout:section1.gif
 *play:swoonlike_sleep.wav
         *wait:20
 *fade:1
 
 
 Someone brought you milk. 
-There is a plate of rotten food.[h]
+There is a plate of rotten food.
 
 
 *choice
@@ -106,11 +108,8 @@ There is a plate of rotten food.[h]
                 Yum.
 
 
-You take to scurrying up the walls.[i]
-        scurrying bug gif in
-        Milk/rotten food painting out
-        Mother big shadow gif  in[j]
-Your sister removes all the furniture in the room.[k]
+You take to scurrying up the walls.
+Your sister removes all the furniture in the room.
 
 
 You’re on the verge of forgetting.
@@ -118,9 +117,9 @@ Mother comes to visit.
 
 
 *speed:5
+
 *choice
         #Hide beneath your sheet.
-                *bug in bed gif in[l]
                 *play:hide.wav
                 *speed:6.7
                 
@@ -129,33 +128,27 @@ Mother comes to visit.
                 *speed:6.5
                 
                 Mother sees you and faints.
-                Father is angry.[m]
-                *big father shadow gif in
+                Father is angry.
                 He throws apples at you. 
-                *apples gif in[n]
                 Mother begs Father to spare your life.
                 
 The family is overworked and exhausted.
 No one has time for you anymore. 
 You’re left in your room, alone.
-                *all gifs fade out
 
 
 #You stop eating.
-        *play:stop_eating.wav
+*play:stop_eating.wav
 *speed:11
 
 
 *fade:10
-You hear the sound of the violin.[o]
-        *color wash gif in
+You hear the sound of the violin.
 
 
 *fade:10
 #Attracted, you venture out to listen.
-*door+disappearing Gregor gif in[p] on CENTER
 Your family disregards you as no longer human. 
-        *looming family gif in[q]
 
 
 *speed:10.1
@@ -167,7 +160,7 @@ Your family disregards you as no longer human.
 
 
 You slowly turn and creep back to your room.
-The door is shut quickly and barred.[r]
+The door is shut quickly and barred.
 
 
 “What now?”
@@ -178,17 +171,16 @@ You sink your head all the way down.
 
 *fade:10
 #Release your last breath
-*animate:clear
-*blue burst gif in[s] centered on button
 *play:release_your_last_breath.wav
 *wait:25
 *fade:1
 
 
 *speed:10
+*stop:fire.wav
 *play:section3.wav
 [Sister] “Come and look, it’s kicked the bucket.”
-*animate:section3_part1.gif[t]
+*animate:section3_part1.gif
 [Father] “Well, now we can give thanks to God.”
 
 
@@ -210,26 +202,3 @@ THE END
 
 
 CREDITS
-
-
-[a]Molly will be adjusting the movement of the bug/alarm clock gif
-[b]Molly will create "dream" animation.
-[c]@luke@lukewilliamsmusic.com can we actually stop the movement of the gif rather than fading it out? don't know if this is possible
-[d]Molly will make a version of this gif where the family is further spread apart on the screen
-[e]Molly will adjust the movement of this gif.
-[f]Molly will make new gif with bug moving from door to corner + blood
-[g]@luke@lukewilliamsmusic.com is it possible to keep the section 1 gif in frame but have the movement stop?
-[h]Molly will make painting of milk and rotten food that will come in here
-[i]Molly will make new gif of scurrying bug
-[j]Molly will make new gif of large Mother shadow
-[k]@cristinalord4@gmail.com should we have had the furniture in the room and then have it disappear here?
-[l]Molly will make new version of bed with bug head peeking out of sheet
-[m]Molly will make big father shadow gif
-[n]Molly will make new gif with apples rolling across screen
-[o]Molly will make new gif of wash of color coming down screen
-[p]Molly will make new gif with door and Gregor slowly disappearing. Place in center of screen, a bit bigger than before
-[q]Molly will make new gif with multiples of the family coming in from all sides
-[r]Molly will make new painting with door closed and barred
-[s]Molly will make new gif with blue burst of color that will be centered around "release your last breath" button and timed with breath music
-[t]Molly will (most likely) clean up the animation of this gif to be smoother, and add a wash of peachy color behind the flowers.
-@luke@lukewilliamsmusic.com Also, the spacing on this section in the app is wrong - it's cut off on all the sides. The animation should line up with the sides of the screen. Let me know if you have questions about how this should look.
