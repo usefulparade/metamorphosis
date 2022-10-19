@@ -7,6 +7,7 @@ You are transformed into a monstrous verminous bug.
 
 #Examine yourself
         *play:bug_loop.wav
+        *play:fire.mp3
         *animate:section1.gif
 
 

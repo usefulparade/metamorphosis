@@ -20,7 +20,7 @@ let audioNames = [
     'bug_loop.wav',
     'come_out.wav',
     'dont_leave.wav',
-    // 'fire.wav',
+    'fire.mp3',
     'hide.wav',
     'if_he_only.wav',
     'keep_sleeping.wav',
