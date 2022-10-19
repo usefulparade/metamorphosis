@@ -45,7 +45,7 @@ function preload()
 
     for (i=0;i<audioNames.length;i++)
     {
-        audio[i] = loadSound('../assets/audio/' + audioNames[i]);
+        audio[i] = loadSound('./assets/audio/' + audioNames[i]);
     }
 
 
