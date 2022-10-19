@@ -73,7 +73,6 @@ It is no dream.
                 *fade:1
                 *wait:15
         #Don’t leave.
-                Keep section 1 gif in frame
                 *animate:section2.gif
                 *animate-swap:section2.gif,section2.png
                 *play:dont_leave.wav

@@ -175,7 +175,7 @@ async function DoThings()
                     val = val.split(",");
                     oldimg = document.getElementById(val[0]);
                     newimg = document.getElementById(val[1]);
-                    oldimg.src = "/assets/img/" + val[1];
+                    oldimg.src = "./assets/img/" + val[1];
                     // oldimg.id = '' + val[1];
                     
                     break;
