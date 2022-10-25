@@ -17,27 +17,29 @@ let choiceButtonA, choiceButtonB;
 
 let audio = [];
 let audioNames = [
-    'bug_loop.wav',
-    'come_out.wav',
-    'dont_leave.wav',
+    'bug_loop.mp3',
+    'come_out.mp3',
+    'dont_leave.mp3',
     'fire.mp3',
-    'hide.wav',
-    'if_he_only.wav',
-    'keep_sleeping.wav',
-    'milk.wav',
-    'open_the_door.wav',
-    'quarter_to_seven.wav',
-    'release_your_last_breath.wav',
-    'rotten_food.wav',
-    'section3.wav',
-    'stop_eating.wav',
-    'swoonlike_sleep.wav',
-    'try_to_get_up.wav',
+    'hide.mp3',
+    'if_he_only.mp3',
+    'keep_sleeping.mp3',
+    'milk.mp3',
+    'open_the_door.mp3',
+    'quarter_to_seven.mp3',
+    'release_your_last_breath.mp3',
+    'rotten_food.mp3',
+    'section3.mp3',
+    'stop_eating.mp3',
+    'swoonlike_sleep.mp3',
+    'try_to_get_up.mp3',
 ];
 
 let skip = [];
 
 let timescale;
+
+let mute, pause, credits;
 
 function preload()
 {
@@ -69,6 +71,10 @@ function setup()
 
     script = script.filter(v=>v!="");
     console.log(script);
+
+    mute = false;
+    pause = false;
+    credits = false;
 
     DoThings();
 }
@@ -438,6 +444,60 @@ function ResolveChoice()
 function ParseScript(txt)
 {
 
+}
+
+function controlsClicked(icon)
+{
+    icon.classList.toggle('controls-active');
+    let menu = document.getElementById('menu');
+    menu.classList.toggle('menu-open');
+}
+
+function ToggleMenuIcon(icon)
+{
+    icon.classList.toggle('menu-active');
+    let type = icon.id;
+
+    switch (type)
+    {
+        case "mute":
+            mute = !mute;
+            if (mute)
+            {
+                outputVolume(0);
+            }
+            else
+            {
+                outputVolume(1);
+            }
+            console.log('toggle mute: ' + mute);
+            break;
+        
+        case "pause":
+            pause = !pause;
+            if (pause)
+            {
+                Pause();
+            }
+            else
+            {
+                Unpause();
+            }
+            console.log('toggle pause: ' + pause);
+            break;
+        case "reload":
+            location.reload();
+            break;
+        
+        case "credits":
+            credits = !credits;
+            console.log('toggle credits: ' + credits);
+            break;
+
+        default:
+            console.log('not sure what this button is!');
+            break;
+    }   
 }
 
 

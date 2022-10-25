@@ -10,6 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="css/main.css">
+    <script src="https://kit.fontawesome.com/f56f12dec3.js" crossorigin="anonymous"></script>
     
     <script src="./js/p5.js"></script>
     <script src="./js/p5.sound.js"></script>
@@ -22,6 +23,17 @@
 
 <body>
 
+        <div class="menuicon">
+            <i onclick="controlsClicked(this)" class="fa-solid fa-bug fa-fw"></i>
+        </div>
+        <div class="menu" id="menu">
+            <!-- <i class="fa-solid fa-volume-high fa-fw"></i> -->
+            <i id="mute" onclick="ToggleMenuIcon(this)" class="fa-solid fa-volume-xmark fa-fw"></i>
+            <!-- <i id="pause" onclick="ToggleMenuIcon(this)" class="fa-solid fa-pause fa-fw"></i> -->
+            <i id="reload" onclick="ToggleMenuIcon(this)" class="fa-solid fa-reply fa-fw"></i>
+            <i id="credits" onclick="ToggleMenuIcon(this)" class="fa-solid fa-question fa-fw"></i>
+            
+        </div>
         <div class="p5canvas"></div>
         <div class="text-container" id="textParent"></div>
 

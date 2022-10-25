@@ -111,3 +111,87 @@ button:active
     filter: opacity(1);
     transition: filter 3s;
 }
+
+.menuicon
+{
+    display: block;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    padding: 16px;
+    z-index: 500;
+    /* background-color: lightgray; */
+    color: lightgray;
+}
+
+.menuicon i
+{
+    /* transform: rotate(0deg); */
+    transition: transform 0.2s;
+    font-size: 1.5em;
+}
+
+.controls-active
+{
+    transform: rotate(180deg);
+    color: black;
+}
+
+.menuicon i:hover
+{
+    color: darkgray;
+    cursor: pointer;
+    transform: rotate(90deg);
+}
+
+i.controls-active:hover
+{
+    transform:rotate(180deg);
+}
+
+.menu
+{
+    display: block;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 0px;
+    overflow: hidden;
+    box-sizing: border-box;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 60px;
+    z-index: 400;
+    background-color: white;
+    transition: height 0.5s;
+}
+
+.menu i
+{
+    display: block;
+    padding-bottom: 20px;
+    font-size: 1.5em;
+    color: darkgray;
+    transform: rotate(0deg);
+    transition: transform 0.2s;
+}
+
+.menu i:hover
+{
+    color: black;
+    cursor: pointer;
+    transform: rotate(10deg);
+
+}
+
+.menu-open
+{
+    padding: 20px;
+    padding-top: 60px;
+    height: 400px;
+}
+
+i.menu-active
+{
+    color: black;
+}
