@@ -77,6 +77,12 @@ function setup()
     credits = false;
 
     DoThings();
+
+    let menuicon = document.getElementById("menuicon");
+    menuicon.classList.add('menuicon-loaded');
+
+    let preload = document.getElementById("preload");
+    preload.classList.add("preload-fade");
 }
 
 function draw()
@@ -455,26 +461,32 @@ function controlsClicked(icon)
 
 function ToggleMenuIcon(icon)
 {
-    icon.classList.toggle('menu-active');
+    
     let type = icon.id;
 
     switch (type)
     {
         case "mute":
             mute = !mute;
+            icon.classList.toggle('menu-active');
             if (mute)
             {
                 outputVolume(0);
+                icon.classList.remove("fa-volume-high");
+                icon.classList.add("fa-volume-xmark");
             }
             else
             {
                 outputVolume(1);
+                icon.classList.add("fa-volume-high");
+                icon.classList.remove("fa-volume-xmark");
             }
             console.log('toggle mute: ' + mute);
             break;
         
         case "pause":
             pause = !pause;
+            icon.classList.toggle('menu-active');
             if (pause)
             {
                 Pause();
@@ -491,6 +503,9 @@ function ToggleMenuIcon(icon)
         
         case "credits":
             credits = !credits;
+            
+            ToggleCredits();
+            
             console.log('toggle credits: ' + credits);
             break;
 
@@ -500,5 +515,22 @@ function ToggleMenuIcon(icon)
     }   
 }
 
+function ToggleCredits()
+{
+    let modal = document.getElementById("creditsmodal");
+    if (credits)
+    {
+        modal.classList.add('creditsmodal-open');
+    }
+    else
+    {
+        modal.classList.remove('creditsmodal-open');
+    }
+}
 
+function CloseCredits()
+{
+    credits = false;
+    ToggleCredits();
+}
 

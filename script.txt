@@ -6,7 +6,7 @@ You are transformed into a monstrous verminous bug.
 
 
 #Examine yourself
-        *play:bug_loop.wav
+        *play:bug_loop.mp3
         *play:fire.mp3
         *animate:section1.gif
 
@@ -24,7 +24,7 @@ It is no dream.
 
 *choice
         #Try to get up.
-                *play:try_to_get_up.wav
+                *play:try_to_get_up.mp3
                 *fade:10
                 “To hell with it all.”
                 *wait:25.5
@@ -32,7 +32,7 @@ It is no dream.
         #Keep sleeping a little longer.
                 *animate-swap:section1.gif,section1.png
                 
-                *play:keep_sleeping.wav
+                *play:keep_sleeping.mp3
                 
                 *fade:10
                 “A man must have his sleep.”
@@ -41,7 +41,7 @@ It is no dream.
 
 *fade:1
 *speed:6
-*play:quarter_to_seven.wav
+*play:quarter_to_seven.mp3
 [Mother] “It’s quarter to seven.”
 [Mother] “Should you be on your way?”
 
@@ -59,7 +59,7 @@ It is no dream.
 *choice
         #Open the door.
                 *animate:section2.gif
-                *play:open_the_door.wav
+                *play:open_the_door.mp3
                 
                 [Mother] “Help, for God’s sake!”
                 
@@ -75,7 +75,7 @@ It is no dream.
         #Don’t leave.
                 *animate:section2.gif
                 *animate-swap:section2.gif,section2.png
-                *play:dont_leave.wav
+                *play:dont_leave.mp3
                 *wait:22
 
 
@@ -85,7 +85,7 @@ It is no dream.
         *animate-fadeout:section2.gif
         *animate-fadeout:shadows.gif
         *animate-fadeout:section1.gif
-*play:swoonlike_sleep.wav
+*play:swoonlike_sleep.mp3
         *wait:20
 *fade:1
 
@@ -96,12 +96,12 @@ There is a plate of rotten food.
 
 *choice
         #Drink the milk.
-                *play:milk.wav
+                *play:milk.mp3
                 *wait:5
                 
                 The milk does not appeal to you.
         #Eat the rotten food.
-                *play:rotten_food.wav
+                *play:rotten_food.mp3
                 *wait:5
                 
                 Yum.
@@ -119,11 +119,11 @@ Mother comes to visit.
 
 *choice
         #Hide beneath your sheet.
-                *play:hide.wav
+                *play:hide.mp3
                 *speed:6.7
                 
         #Come out.
-                *play:come_out.wav
+                *play:come_out.mp3
                 *speed:6.5
                 
                 Mother sees you and faints.
@@ -137,7 +137,7 @@ You’re left in your room, alone.
 
 
 #You stop eating.
-*play:stop_eating.wav
+*play:stop_eating.mp3
 *speed:11
 
 
@@ -151,7 +151,7 @@ Your family disregards you as no longer human.
 
 
 *speed:10.1
-*play:if_he_only.wav
+*play:if_he_only.mp3
 *fade:6
 [Sister] “We must try to get rid of it.”
 *wait:16
@@ -170,14 +170,14 @@ You sink your head all the way down.
 
 *fade:10
 #Release your last breath
-*play:release_your_last_breath.wav
+*play:release_your_last_breath.mp3
 *wait:25
 *fade:1
 
 
 *speed:10
-*stop:fire.wav
-*play:section3.wav
+*stop:fire.mp3
+*play:section3.mp3
 [Sister] “Come and look, it’s kicked the bucket.”
 *animate:section3_part1.gif
 [Father] “Well, now we can give thanks to God.”

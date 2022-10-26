@@ -22,16 +22,21 @@
 </head>
 
 <body>
+        <div id="preload" class="preload">
+            <i style="font-size: 4em" class="fa-solid fa-bug fa-fw fa-beat-fade"></i>
+            <h1>loading...</h1>
+        </div>
 
-        <div class="menuicon">
+        <div id="menuicon" class="menuicon">
             <i onclick="controlsClicked(this)" class="fa-solid fa-bug fa-fw"></i>
         </div>
         <div class="menu" id="menu">
+            <i id="credits" onclick="ToggleMenuIcon(this)" class="fa-solid fa-question fa-fw"></i>
             <!-- <i class="fa-solid fa-volume-high fa-fw"></i> -->
-            <i id="mute" onclick="ToggleMenuIcon(this)" class="fa-solid fa-volume-xmark fa-fw"></i>
+            <i id="mute" onclick="ToggleMenuIcon(this)" class="fa-solid fa-volume-high fa-fw"></i>
             <!-- <i id="pause" onclick="ToggleMenuIcon(this)" class="fa-solid fa-pause fa-fw"></i> -->
             <i id="reload" onclick="ToggleMenuIcon(this)" class="fa-solid fa-reply fa-fw"></i>
-            <i id="credits" onclick="ToggleMenuIcon(this)" class="fa-solid fa-question fa-fw"></i>
+            
             
         </div>
         <div class="p5canvas"></div>
@@ -49,6 +54,24 @@
             <img src="./assets/img/section3_part1.gif" id="section3_part1.gif">
             <img src="./assets/img/section3_part2.gif" id="section3_part2.gif">
             <img src="./assets/img/section3.png" id="section3.png">
+            
+        </div>
+
+        <div id="creditsmodal" class="creditsmodal">
+            <div class="modalbg"></div>
+            
+            <div class="modalbox">
+                <div class="modalcontent">
+                    <h1>Metamorphosis</h1>
+                    <p>project description & credits go here :)</p>
+                    <p>in the meantime, two random paragraphs from moby dick:</p>
+                    <p>Nor are the most conscientious compilations of Natural History for the benefit of the young and tender, free from the same heinousness of mistake. Look at that popular work “Goldsmith’s Animated Nature.” In the abridged London edition of 1807, there are plates of an alleged “whale” and a “narwhale.” I do not wish to seem inelegant, but this unsightly whale looks much like an amputated sow; and, as for the narwhale, one glimpse at it is enough to amaze one, that in this nineteenth century such a hippogriff could be palmed for genuine upon any intelligent public of schoolboys.</p>
+                    <p>“Omen? omen?—the dictionary! If the gods think to speak outright to man, they will honorably speak outright; not shake their heads, and give an old wives’ darkling hint.—Begone! Ye two are the opposite poles of one thing; Starbuck is Stubb reversed, and Stubb is Starbuck; and ye two are all mankind; and Ahab stands alone among the millions of the peopled earth, nor gods nor men his neighbors! Cold, cold—I shiver!—How now? Aloft there! D’ye see him? Sing out for every spout, though he spout ten times a second!”</p>
+                </div>
+                <div class="creditsclose">
+                    <i onclick="CloseCredits()" class="fa-solid fa-close"></i>
+                </div>
+            </div>
             
         </div>
 </body>
