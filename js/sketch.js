@@ -65,7 +65,7 @@ function setup()
     fadeTime = 3;
     paused = false;
     choice = 0;
-    timescale = 1000; // CHANGE THIS TO 1000 for seconds!
+    timescale = 100; // CHANGE THIS TO 1000 for seconds!
     textBoxes = document.getElementsByClassName("textbox");
     textParent = document.getElementById("textParent");
 
@@ -318,11 +318,16 @@ function Pause()
     paused = true;
 }
 
-function Unpause()
+function Unpause(btn)
 {
-    paused = false;
-    playhead++;
-    DoThings(); 
+    if (btn.dataset.clicked == 'false')
+    {
+        btn.dataset.clicked = 'true';     
+        paused = false;
+        playhead++;
+        DoThings(); 
+    }
+     
 
 }
 
@@ -350,7 +355,8 @@ function MakeButton(line)
 
     console.log("button: " + line);
     button = createButton(line.slice(1));
-    button.mousePressed(Unpause);
+    button.elt.dataset.clicked = false;
+    button.elt.setAttribute('onclick', 'Unpause(this)');
     return button;
 }
 
@@ -360,14 +366,16 @@ function MakeChoiceButton(line, id)
     console.log("choice button: " + line);
 
     button = createButton(line.slice(1));
+    button.elt.dataset.clicked = false;
+    
 
     if (id == 0)
     {
-        button.mousePressed(ChoiceA);
+        button.elt.setAttribute('onclick', 'ChoiceA(this)');
     }
     else
     {
-        button.mousePressed(ChoiceB);
+        button.elt.setAttribute('onclick', 'ChoiceB(this)');
     }
     return button;
 }
@@ -408,16 +416,25 @@ function sleep(secondsDuration)
   })
 }
 
-function ChoiceA()
+function ChoiceA(btn)
 {
-    choice = 0;
-    ResolveChoice();
+    if (btn.dataset.clicked == 'false')
+    {
+        btn.dataset.clicked = 'true'
+        choice = 0;
+        ResolveChoice();
+    }
+   
 }
 
-function ChoiceB()
+function ChoiceB(btn)
 {
-    choice = 1;
-    ResolveChoice();
+    if (btn.dataset.clicked == 'false')
+    {
+        btn.dataset.clicked = 'true'
+        choice = 1;
+        ResolveChoice();
+    }
 }
 
 function ResolveChoice()
