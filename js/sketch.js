@@ -65,7 +65,7 @@ function setup()
     fadeTime = 3;
     paused = false;
     choice = 0;
-    timescale = 100; // CHANGE THIS TO 1000 for seconds!
+    timescale = 1000; // CHANGE THIS TO 1000 for seconds!
     textBoxes = document.getElementsByClassName("textbox");
     textParent = document.getElementById("textParent");
 
